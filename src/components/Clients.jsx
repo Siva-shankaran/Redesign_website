@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
-import casagrand from "../assets/clients/Casagrand-Logo1.png";
+import casagrand from "../assets/clients/casagrand.png";
 import sobha from "../assets/clients/shoba.png";
-import lw from "../assets/clients/L & W Logo.avif";
-import ncc from "../assets/clients/NCC.jpeg";
-import vertex from "../assets/clients/VERTEX.webp";
-import shriram from "../assets/clients/SHRIRAM.png";
+import lw from "../assets/clients/landw.avif";
+import ncc from "../assets/clients/ncc.jpeg";
+import vertex from "../assets/clients/vertex.webp";
+import shriram from "../assets/clients/sriram.png";
 
 const clients = [
   casagrand,
