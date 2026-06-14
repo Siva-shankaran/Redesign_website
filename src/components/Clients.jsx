@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 import casagrand from "../assets/clients/casagrand.png";
-import sobha from "../assets/clients/shoba.png";
-import lw from "../assets/clients/landw.avif";
+import sobha from "../assets/clients/sobha.png";
+import lw from "../assets/clients/lw.avif";
 import ncc from "../assets/clients/ncc.jpeg";
 import vertex from "../assets/clients/vertex.webp";
-import shriram from "../assets/clients/sriram.png";
+import shriram from "../assets/clients/shriram.png";
 
 const clients = [
   casagrand,
@@ -58,27 +58,26 @@ function Clients() {
         {allClients.map((logo, index) => (
 
           <motion.div
-  className="clients-track flex gap-12 w-max"
-            key={index}
+  key={index}
+  whileHover={{
+    scale: 1.08,
+    y: -5,
+  }}
 
-            whileHover={{
-              scale: 1.1,
-              y: -5,
-            }}
-
-            className="
-              bg-white
-              rounded-2xl
-              shadow-md
-              p-6
-              flex
-              items-center
-              justify-center
-              min-w-[220px]
-              h-[120px]
-            "
-
-          >
+             className="
+    bg-white
+    rounded-2xl
+    shadow-md
+    p-6
+    flex
+    items-center
+    justify-center
+    min-w-[220px]
+    h-[120px]
+    transition-all
+    duration-300
+  "
+>
 
             <img
               src={logo}
