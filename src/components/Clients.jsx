@@ -1,95 +1,38 @@
-import { motion } from "framer-motion";
-
-import casagrand from "../assets/clients/casagrand.png";
-import sobha from "../assets/clients/sobha.png";
-import lw from "../assets/clients/lw.avif";
-import ncc from "../assets/clients/ncc.jpeg";
-import vertex from "../assets/clients/vertex.webp";
-import shriram from "../assets/clients/shriram.png";
-
 const clients = [
-  casagrand,
-  sobha,
-  lw,
-  ncc,
-  vertex,
-  shriram,
+  "CASAGRAND",
+  "SHRIRAM",
+  "L&W CPL",
+  "SOBHA",
+  "NCC URBAN",
+  "VERTEX HOMES",
 ];
-
-// Duplicate logos for seamless looping
-const allClients = [...clients, ...clients];
 
 function Clients() {
   return (
-   <section className="clients-section py-18 bg-[#F8F5EF] overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
 
-      <div className="max-w-7xl mx-auto px-8">
+      <h2 className="text-5xl font-bold text-center mb-16">
+        Trusted By
+      </h2>
 
-        <div className="text-center mb-12">
+      <div className="overflow-hidden">
 
-          <p className="text-orange-500 tracking-[4px] uppercase font-semibold">
-            Trusted By
-          </p>
+        <div className="flex gap-16 whitespace-nowrap animate-marquee">
 
-          <h2 className="text-4xl font-bold mt-2">
-            Our Clients
-          </h2>
+          {[...clients, ...clients].map((client, index) => (
+
+            <div
+              key={index}
+              className="text-3xl font-bold text-gray-300 hover:text-orange-500 transition"
+            >
+              {client}
+            </div>
+
+          ))}
 
         </div>
 
       </div>
-
-      <motion.div
-
-        className="flex gap-12 w-max"
-
-        animate={{
-          x: ["0%", "-50%"],
-        }}
-
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-
-      >
-
-        {allClients.map((logo, index) => (
-
-          <motion.div
-  key={index}
-  whileHover={{
-    scale: 1.08,
-    y: -5,
-  }}
-
-             className="
-    bg-white
-    rounded-2xl
-    shadow-md
-    p-6
-    flex
-    items-center
-    justify-center
-    min-w-[220px]
-    h-[120px]
-    transition-all
-    duration-300
-  "
->
-
-            <img
-              src={logo}
-              alt=""
-              className="max-h-14 object-contain"
-            />
-
-          </motion.div>
-
-        ))}
-
-      </motion.div>
 
     </section>
   );
