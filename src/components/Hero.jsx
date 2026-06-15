@@ -39,7 +39,7 @@ function Hero() {
 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
       {/* Fixed Content */}
     <motion.div
-  className="absolute inset-0 flex items-center"
+  className="absolute inset-0 flex items-center pt-24 md:pt-0"
   initial={{ opacity: 0, x: -60 }}
   animate={{ opacity: 1, x: 0 }}
   transition={{ duration: 1 }}
